@@ -1,0 +1,35 @@
+<html>
+     <head>
+	 </head>
+	 <body>
+	     <canvas id="tela" width="600" height="400"></canvas>
+	 </body>
+	 <script>
+	     var tela = document.getElementById("tela");
+		 var c = tela.getContext("2d");
+		 
+		 //retangulo
+		 c.fillStyle="green";
+		 c.fillRect(0, 0, 200, 400);
+		 // x, y, altura, largura	 
+		 c.fillStyle="red";
+		 c.fillRect(400, 0, 200, 400);
+		 
+		 //triangulo
+		 c.fillStyle="gray";
+		 c.beginPath();
+		 c.moveTo(300,200);
+		 c.lineTo(200, 400);
+		 c.lineTo(400, 400);
+		 c.fill( ) ;
+		 
+		 //circulo
+		 c.fillStyle="blue";
+		 c.beginPath( ) ;
+		 c.arc(300 , 200, 50, 0 , 2*Math.PI);
+		 c.fill( ) ;
+		 
+		 
+		 
+	 </script>
+</html>

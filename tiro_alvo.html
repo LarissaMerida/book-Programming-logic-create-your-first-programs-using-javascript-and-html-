@@ -1,0 +1,78 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="tela" width="600" height="400"></canvas>
+	</body>
+	<script>
+		var tela  = document.getElementById("tela");
+		var c = tela.getContext("2d");
+		 
+		c.fillStyle = "green";
+		c.fillRect(0, 0, 200, 400);
+		
+		var cor = function(nomeCor){
+	    	c.fillStyle = nomeCor;
+	    };
+		
+		var circulo = function(x, y, raio){
+			c.strokeStyle = "000";
+			c.beginPath();
+			c.arc(x, y, raio, 0, 2*Math.PI);
+			c.fill();
+			c.stroke();
+		};
+		
+		var desenhaAlvo = function(x, y){
+			var raio = 40;
+			cor("white");
+			circulo(x, y, raio);
+			cor("red");
+			circulo(x, y, raio-10);
+			cor("white");
+			circulo(x, y, raio-20);
+			cor("red");
+			circulo(x, y, raio-30);
+		};
+		var limpa = function() {
+			c.clearRect(0, 0, 600, 400);
+		};
+		
+		var sorteia = function(limite){
+			return Math.round(Math.random() * limite);
+		};
+		
+		var alvoX;
+		var alvoY;
+		
+		var calcPitagoras = function(catetoA, catetoB){
+	    	var somaCatetos = catetoA*catetoA + catetoB*catetoB;
+	    	return Math.sqrt(somaCatetos);
+	    }
+		
+	    tela.onclick = function(event){
+	    	var x = event.pageX;
+	    	var y = event.pageY;
+	    	var posClick = calcPitagoras(x, y);
+	    	console.log(posClick);
+	    			
+			if(posAlvo - posClick < 1){
+	    		console.log("acertou o alvo");
+	    	}
+	    	else{
+	    		console.log("não acertou o alvo");
+	    	}
+	    }
+		
+		var desenha = function(){
+			limpa();
+			alvoX = sorteia(600);
+			alvoY = sorteia(400);
+			desenhaAlvo(alvoX, alvoY);
+			posAlvo = calcPitagoras(alvoX, alvoY);
+	    	console.log(posAlvo);
+		};
+		setInterval(desenha, 1000);
+	
+	</script>
+</html>

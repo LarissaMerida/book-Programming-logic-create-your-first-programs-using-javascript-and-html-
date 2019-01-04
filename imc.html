@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset = "utf-8">
+  <head>
+  <body>
+     <script>
+			  var pulaLinha = function(){
+				document.write("<br><hr><br>");
+			 };
+			 var mostra = function(frase){
+				document.write("<big>" + frase + "</big>");
+				pulaLinha();
+			 };
+		    var calculaIMC = function(alturaDoPrimo, pesoDoPrimo){
+			  var imcDoUsuario = pesoDoPrimo /(alturaDoPrimo * alturaDoPrimo);
+			  mostra("IMC calculado é: " + imcDoUsuario);
+			}
+			var nome = prompt("Qual é o seu nome?");
+			
+			var alturaDoUsuario = prompt(nome + ", Bom dia! Qual é a sua altura?" );
+			var pesoDoUsuario = prompt(nome +", o seu peso?");
+			
+			var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+			
+			/*var peso = 75;
+			var altura = 1.72;
+			var imc = peso / (altura * altura);
+			mostra("meu IMC é: " + Math.round(imc));
+			
+			
+			var pesoDoPrimo = 83;
+			var alturaDoPrimo = 1.76;
+			var imcDoPrimo =  pesoDoPrimo / (alturaDoPrimo * alturaDoPrimo);
+			mostra("o IMC do primo é:" + imc);
+			
+			
+			
+			
+			var pesoDoPrimo = 67;
+			var alturaDoPrimo = 1.56;
+			calculaIMC(alturaDoPrimo, pesoDoPrimo);*/
+			
+			
+	  </script>
+  </body>
+</html>

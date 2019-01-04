@@ -1,0 +1,41 @@
+<script>
+     var linha;
+	 var coluna;
+	 //var tamanho = prompt("Qual é o tamanho?");
+	 
+	 for(linha = 1; linha <= 10; linha++) {
+	     for(coluna = 1; coluna <= linha; coluna++) {
+		     document.write("*");
+		 }
+		 document.write("<br>");
+	 }
+	 
+	 
+	 
+	 for(linha = 1; linha <= 10; linha++) {
+	     for(coluna = 1; coluna <= 10; coluna++) {
+		     if(coluna == linha || coluna == (10 - linha)) {
+			     document.write("*");
+			 }
+		     else {
+			     document.write("_")
+			 }
+		 }
+		 
+		 document.write("<br>");
+	 }
+	 
+	 for(linha = 1; linha <= 5; linha++) {
+	     for(coluna = 1; coluna <= 10; coluna++) {
+		     if(coluna == linha || coluna == (10 - linha)) {
+			     document.write("*");
+			 }
+		     else {
+			     document.write("_")
+			 }
+		 }
+		 document.write("<br>");
+		 
+	 }
+	 
+</script>

@@ -1,0 +1,16 @@
+<script>
+	     var totalDeFamiliares = prompt("Quantos familiares são?");
+		 var somaDeIdades = 0;
+		 
+		 var numero = 1;
+		 while(numero <= totalDeFamiliares) {
+		     var idadeTexto = prompt("Qual é a idade?");
+			 var idade = parseInt(idadeTexto);
+			 somaDeIdades += idade;
+			 
+		     numero++;
+		 }
+		 
+		 var media = somaDeIdades / totalDeFamiliares;
+		 alert("A média  é: " + media);
+</script>

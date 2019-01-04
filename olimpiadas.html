@@ -1,0 +1,15 @@
+<script>
+     var mostra = function(frase) {
+	     document.write(frase + "<br>");
+	 }
+	 
+	 var anoTexto = prompt("Infomr o ano");
+	 var anoInicial = parseInt(anoTexto);
+	 var anoLimite = prompt("Qual o limite?");
+	 
+	 while(anoInicial <= anoLimite){
+    	  anoInicial += 4;
+          mostra(anoInicial + " tem olimpíadas");
+	}
+	 mostra("Nossa !! Acabou");
+</script>

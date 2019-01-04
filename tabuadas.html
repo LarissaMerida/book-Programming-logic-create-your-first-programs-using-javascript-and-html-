@@ -1,0 +1,17 @@
+<script>
+     var mostra = function(frase){
+         document.write(frase + "<br>");
+    }
+	
+    var multiplicador = 1;
+	var numero = prompt("Tabuada de q?");
+    while(multiplicador <= 10){
+	  mostra(numero + " * " + multiplicador  + " = " + (multiplicador * numero));
+	  multiplicador += 1;
+	}
+	
+	
+	for(multiplicador = 1; multiplicador <= 10; multiplicador++){
+	 mostra(multiplicador * 8);
+	}
+</script>

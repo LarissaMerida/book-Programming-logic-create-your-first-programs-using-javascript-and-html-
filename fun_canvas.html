@@ -1,0 +1,56 @@
+<html>
+     <head>
+	 </head>
+	 <body>
+	    <canvas id="tela" width="600" height="400"></canvas>
+	 </body>
+     <script>
+	     var desenhaQuadrado = function(x, y, cor){
+		     var tela = document.getElementById("tela");
+			 var c = tela.getContext("2d");
+			 
+			 c.fillStyle= cor;
+			 c.fillRect(x, y, 50, 50);
+			 
+			 c.strokeStyle="black";
+			 c.strokeRect(x, y, 50, 50);
+		 };
+		 
+		/* var desenhaQuadradoVermelho = function(x, y) {
+		     var tela = document.getElementById("tela");
+			 var c = tela.getContext("2d");
+			 
+			 c.fillStyle="red";
+			 c.fillRect(x, y, 50, 50);
+			 
+			 c.strokeStyle="black";
+			 c.strokeRect(x, y, 50, 50);
+		 };
+		  */
+		 var desenhaBola= function(x, y, cor) {
+		     var tela = document.getElementById("tela");
+			 var c = tela.getContext("2d");
+			 
+			 c.fillStyle= cor;
+			 c.beginPath();
+			 c.arc(x, y, 25, 0, 2*Math.PI);
+             c.fill();		 
+		 };
+		 
+		 var x= 0;
+		 while(x < 600) {
+		     desenhaQuadrado(x, 0, "green");
+			 desenhaQuadrado(x, 50, "red");
+			 desenhaBola(x+25, 100, "purple");
+			 x+=50;
+		 }
+		 
+		 for(var x = 0; x < 600; x+=50)
+		 {
+		     desenhaQuadrado(x, 130, "orange");
+			 desenhaQuadrado(x , 180, "pink");
+			  desenhaBola(x+25, 230, "yellow");
+		 }
+		 
+	 </script>
+</html>

@@ -1,0 +1,42 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="tela" width="600" height="400"></canvas>
+	</body>
+	<script>
+		var tela = document.getElementById("tela");
+		var c = tela.getContext("2d");
+		
+		c.fillStyle = "green";
+		c.fillRect(0, 0, 200, 400);
+		
+		var circulo = function(x, y, raio){
+			c.strokeStyle = "blue";
+			c.beginPath();
+			c.arc(x, y, raio, 0, 2*Math.PI);
+			c.stroke();
+		};
+		
+		var limpaTela = function() {
+			c.clearRect(0, 0, 600, 400);
+		};
+		
+		var x = 1;
+		
+		var desenha = function(){
+			//limpaTela();
+			circulo(x, 100, x/2);
+			x = x +1;		
+		};
+		//setInterval(desenha, 30);
+		
+		var imagem = new Image();
+		imagem.src = "C:\Users\MAceio\Desktop\1\Logica de programacao crie seus primeiros programas usando javascript e html/coracao.jpg";
+		
+		var desenhaImagem = function(x, y){
+			c.drawImage(imagem, x, y);
+		};
+		setInterval(desenhaImagem, 30);
+	</script>
+</html>

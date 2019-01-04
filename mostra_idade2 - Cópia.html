@@ -1,0 +1,17 @@
+<script>
+//esta funcao mostrauma linha e pula outra
+   var pulaLinha = function(){
+     document.write("<br><hr><br>");
+   };
+   
+ //esta função mostra a frase
+   var mostra = function(frase){
+      document.write("<big>" + frase + "</big>");
+      pulaLinha();
+   };
+   
+   var ano = 2016;
+   mostra("Eu nasci em :" + (ano - 19));
+   mostra("Adriano nasceu em :" + (ano - 26));
+   mostra("Paulo nasceu em :" + (ano - 32));
+</script>

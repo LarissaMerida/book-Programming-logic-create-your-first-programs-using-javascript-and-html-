@@ -1,0 +1,106 @@
+<html>
+     <head>
+	 </head>
+	 <body>
+	     <canvas id="tela" width="900" height="600"></canvas>
+	 </body>
+	 <script>
+	    var tela= document.getElementById("tela");
+		var c = tela.getContext("2d");
+		
+		//document.write("bandeira Colombia");
+		c.fillStyle="yellow";
+		c.fillRect(0, 0,  300, 80);
+		//(x, y, largura, altura)
+		c.fillStyle="#000080";
+		c.fillRect(0 , 80, 300, 50);
+		c.fillStyle="#CD0000";
+	    c.fillRect(0, 130, 300, 50);
+		
+		//bandeira Madacasgar
+		c.fillStyle="#CD0000";
+		c.fillRect(100, 250, 200, 100);
+		c.fillStyle="green";
+		c.fillRect(100, 350, 200, 100);
+		
+		//bandeira do Laos
+		c.fillStyle="#CD0000";
+		c.fillRect(310, 0, 300, 50);
+	    c.fillStyle="#000080";
+		c.fillRect(310, 50, 300, 80);
+		c.fillStyle="#CD0000";
+		c.fillRect(310, 130, 300, 50);
+		//circulo
+		c.fillStyle="white";
+		c.beginPath();
+		 c.arc(455, 90, 30, 0, 2*Math.PI);
+		 c.fill( ) ;
+		 
+		 //bandeira da Niger
+		 c.fillStyle="#FF4500";
+		 c.fillRect(310, 250, 300, 70);
+		 c.fillStyle="green";
+		 c.fillRect(310, 400, 300, 70);
+		 c.fillStyle="#FF4500";
+		 c.beginPath();
+		 c.arc(455, 360, 30, 0, 2*Math.PI);
+		 c.fill();
+		 
+		 //bandeirada Noruega
+		 c.fillStyle="#CD0000";
+		 c.fillRect(620, 0, 50, 75);
+		 c.fillStyle="#000080";
+		 c.fillRect(680, 0, 20, 198);
+		 c.fillStyle="#CD0000";
+		 c.fillRect(620, 120, 50, 75);
+		 c.fillStyle="#000080";
+		 c.fillRect(620, 85, 300, 22);
+		 c.fillStyle="#CD0000";
+		 c.fillRect(710, 0,  190, 75);
+		 c.fillStyle="#CD0000";
+		 c.fillRect(710, 120, 190, 75);
+		 
+		 //Brasil
+		 c.fillStyle="yellow";
+		 c.fillRect(620, 250, 300, 220);
+		 //triangulo
+		 c.fillStyle="green";
+		 c.beginPath();
+		 c.moveTo(620, 250);
+		 c.lineTo(750, 250);
+		 c.lineTo(620, 350);
+		 c.fill( ) 
+		 
+		 c.fillStyle="green";
+		 c.beginPath();
+		 c.moveTo(900, 250);
+		 c.lineTo(750, 250);
+		 c.lineTo(900, 350);
+		 c.fill( ) 
+		 
+		 c.fillStyle="green";
+		 c.beginPath();
+		 c.moveTo(900, 470);
+		 c.lineTo(755, 470);
+		 c.lineTo(900, 346);
+		 c.fill( ) 
+		 
+		 c.fillStyle="green";
+		 c.beginPath();
+		 c.moveTo(620, 470);
+		 c.lineTo(755, 470);
+		 c.lineTo(620, 350);
+		 c.fill( ) 
+		 
+		 //circulo
+		 c.fillStyle="#000080";
+		 c.beginPath();
+		 c.arc(754, 356, 70, 0, 2*Math.PI);
+		 c.fill();
+		 
+		 
+		 
+		 
+		
+	 </script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+     <meta charset = "utf-8">
+  </head>
+  <body>
+		<script>
+
+			var pulaLinha = function(){
+				document.write("<br><hr><br>");
+			};
+			var mostra = function(frase){
+				document.write("<big>" + frase + "</big>");
+				pulaLinha();
+			};
+			
+		   var calculaDiasdeVida = function(idade){
+			 var dias = idade * 365;
+			  mostra("Você já viveu " + dias + " dias de vida");
+			   var batimentos = calculaBatimentos(dias);
+		   }
+		   
+		   var calculaBatimentos = function(dias){
+			 var batimentos = dias * 24 * 60 * 80;
+			  mostra("Seu coração já bateu " + batimentos + " vezes. Haja coração!");
+			
+		   }
+
+		   var idade = prompt("Quantos anos você tem?")
+		   var dias = calculaDiasdeVida(idade);
+		</script>
+	</body>
+</head>

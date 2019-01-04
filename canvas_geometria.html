@@ -1,0 +1,66 @@
+<html>
+     <head>
+	 </head>
+	 <body>
+	     <canvas id="tela" width="1000" height="1000"></canvas>
+	 </body>
+	 <script>
+	     var desenhaBola = function(x, y, cor) {
+		    var tela =  document.getElementById("tela");
+			var c = tela.getContext("2d");
+			
+			c.fillStyle=cor;
+			c.beginPath();
+			c.arc(x, y, 3, 0, 2*Math.PI);
+			c.fill();
+		 };
+		 
+		 var linha;
+		 var coluna;
+		 
+		 for(linha = 1; linha <= 100; linha+=10) {
+	     for(coluna = 1; coluna <= linha; coluna+=10) {
+		           desenhaBola(coluna, linha, "grey");
+		   }
+		   document.write("<br>");
+	    }
+	 
+	     document.write("<br>");
+		  
+		for(linha = 200; linha <= 300; linha++) {
+		     for(coluna = 200; coluna <= 300; coluna++) {
+			     if(coluna == linha) {
+				     desenhaBola(coluna, linha, "green");
+				 }
+				else {
+				    desenhaBola(coluna, linha,  "red");
+				 }
+	            document.write("<br>");
+			 }
+			  coluna = 300;			  
+			  while(coluna >= 200){
+			     
+				     desenhaBola(linha, coluna, "yellow");
+					 break;
+				    coluna--;
+		    }
+		 }
+		 
+		 document.write("<br>");
+		 
+		 for(linha = 400; linha <= 450; linha++) {
+	         for(coluna = 400; coluna <= 500; coluna++) {
+				 if(coluna == linha || coluna == (10 - linha)) {
+					 desenhaBola(coluna, linha, "pink");
+				 }
+				 else {
+					 desenhaBola(coluna, linha, "purple");
+				 }
+			 }
+			 document.write("<br>");
+		 
+	    }
+	 
+		 
+	 </script>
+</html>
